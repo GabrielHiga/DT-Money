@@ -7,7 +7,7 @@ createServer({
   routes() {
     this.namespace = "api";
 
-    this.get("/transactions"), () => {
+    this.get("/transactions", () => {
       return [
         {
           id: 1,
@@ -18,9 +18,9 @@ createServer({
           createaAt: new Date()
         }
       ]
-    }
+    })
   }
-})
+});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
